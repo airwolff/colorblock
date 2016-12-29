@@ -10,9 +10,18 @@
   "author": "Kris Szafranski",
   "license": "ISC",
   "dependencies": {
-    "angular": "^1.5.8",
-    "angular-route": "^1.5.8",
+    "angular": "^1.6.0",
+    "angular-route": "^1.6.0",
     "bootstrap": "^3.3.7",
     "express": "^4.14.0"
-  }
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/airwolff/colorblock.git"
+  },
+  "bugs": {
+    "url": "https://github.com/airwolff/colorblock/issues"
+  },
+  "homepage": "https://github.com/airwolff/colorblock#readme"
 }

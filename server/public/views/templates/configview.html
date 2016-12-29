@@ -1,11 +1,27 @@
-<div class="row">
+<!-- ng-controller="SettingsController as settings"  -->
+<div class="row" ng-controller="SettingsController as settings">
+    <h1>Settings</h1>
+    <form ng-submit="settings.addColor()">
+        <label for="newColor">Choose a new color:</label>
+        <input name='newColor' type='text' ng-model="settings.newColor.color"></input>
+        <input id="submit" type="submit" value="Submit Color" />
+</div>
+<div>
+    <table id="colorTable" class="table">
+        <thead>
+            <tr>
+                <th>Color</th>
+                <th>Delete Color</th>
+            </tr>
+        </thead>
+        <tbody>
 
-  <h3>Add a New Color</h3>
-  <form>
-    <div class="form-group">
-      <label for="newColor">Enter New Color:</label>
-      <input type="text" ng-model="settings.newColor" class="form-control" />
-    </div>
-    <button class="btn btn-primary" ng-click="settings.addNewColor()">Add That New Color!</button>
-  </form>
+            <tr ng-repeat="color in settings.colors track by $index">
+                <td>{{color}}</td>
+                <td><button ng-click="settings.deleteColor(color)">Delete</button></td>
+            </tr>
+
+        </tbody>
+    </table>
+    </form>
 </div>

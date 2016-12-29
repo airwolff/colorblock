@@ -1,13 +1,8 @@
-colorBlocks.factory('DataFactory', [function() {
-  console.log("data factory running");
+colorBlocks.factory('DataFactory', [function () {
+	console.log("data factory running");
 
-  var colors = ['red', 'blue', 'magenta', 'green', 'pink'];
-
-  var publicApi = {
-    colors: colors
-  };
-
-  return publicApi;
+	var colors = ['red', 'blue', 'magenta', 'green', 'pink'];
+	return colors;
 }]);
 
 // These are here in case I have the time to figure out a way to use all of the CSS colors
